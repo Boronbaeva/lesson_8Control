@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    background: #FCF8EF;
+    color: #342018;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.header {
+    width: 100%;
+    height: 64px;
+
+    background: #FCF8EF;
+}
+
+
+.header__container {
+    width: 100%;
+    max-width: 960px;
+    height: 64px;
+
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    display: block;
+
+    width: 118px;
+    height: auto;
+}
+
+
+.logo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    margin-left: auto;
+    margin-right: 72px;
+}
+
+
+.navigation a {
+    position: relative;
+
+    color: #342018;
+
+    font-size: 13px;
+    line-height: 1;
+
+    transition: color 0.2s ease;
+}
+
+
+.navigation a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: #68300F;
+
+    transition: width 0.2s ease;
+}
+
+
+.navigation a:hover {
+    color: #68300F;
+}
+
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.booking-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 34px;
+
+    padding: 0 22px;
+
+    border-radius: 18px;
+
+    background: #68300F;
+    color: #FFFFFF;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.booking-button:hover {
+    background: #4F230B;
+
+    transform: translateY(-1px);
+}
+
+
+.booking-button:active {
+    transform: translateY(0);
+}
+
+
+.burger {
+    display: none;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.burger span {
+    display: block;
+
+    width: 23px;
+    height: 2px;
+
+    margin: 5px 0;
+
+    background: #342018;
+}
+
+.hero {
+    width: 100%;
+
+    background: #FCF8EF;
+}
+
+
+.hero__content {
+    position: relative;
+
+    width: 100%;
+    max-width: 960px;
+
+    height: 266px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #F7EEE3;
+}
+
+.hero__text {
+    position: relative;
+
+    z-index: 2;
+
+    width: 36%;
+    height: 100%;
+
+    padding-left: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.hero h1 {
+    margin-bottom: 14px;
+
+    color: #321D16;
+
+    font-size: 39px;
+    line-height: 1.02;
+    font-weight: 700;
+
+    letter-spacing: -1.2px;
+}
+
+
+.hero p {
+    margin-bottom: 15px;
+
+    color: #4D5863;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+
+.hero__button {
+    height: 40px;
+
+    padding: 0 25px;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+}
+
+.hero__image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    z-index: 1;
+
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.benefits {
+    width: 100%;
+
+    background: #FCF8EF;
+}
+
+
+.benefits__container {
+    width: 100%;
+    max-width: 960px;
+
+    margin: 0 auto;
+
+    padding: 8px 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+.benefit-card {
+    min-height: 96px;
+
+    padding: 8px 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #EADFD3;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.benefit-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(80, 45, 25, 0.08);
+}
+
+
+.benefit-card__icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+}
+
+
+.benefit-card__text h2 {
+    margin-bottom: 5px;
+
+    color: #38251D;
+
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+.benefit-card__text p {
+    color: #5E6870;
+
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 58px;
+    }
+
+
+    .header__container {
+        height: 58px;
+
+        padding: 0 24px;
+
+        justify-content: space-between;
+    }
+
+
+    .logo {
+        width: 118px;
+    }
+
+
+    .navigation {
+        display: none;
+    }
+
+
+    .header .booking-button {
+        display: none;
+    }
+
+
+    .burger {
+        display: block;
+    }
+
+
+    .hero__content {
+        width: 100%;
+        max-width: 375px;
+
+        height: 344px;
+
+        margin: 0 auto;
+
+        background: #F7EEE3;
+    }
+
+    .hero__image {
+        top: auto;
+        right: 0;
+        bottom: 0;
+
+        width: auto;
+        height: 190px;
+
+        max-width: none;
+
+        object-fit: contain;
+        object-position: right bottom;
+    }
+
+
+    .hero__text {
+        position: relative;
+
+        z-index: 3;
+
+        width: 100%;
+        height: auto;
+
+        padding: 20px 28px 0;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+
+    .hero h1 {
+        margin-bottom: 9px;
+
+        font-size: 27px;
+        line-height: 1.04;
+
+        letter-spacing: -0.5px;
+    }
+
+
+    .hero p {
+        margin-bottom: 12px;
+
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+
+    .hero__button {
+        height: 46px;
+
+        padding: 0 25px;
+
+        border-radius: 13px;
+
+        font-size: 15px;
+    }
+
+
+    .benefits {
+        padding: 0 8px 14px;
+    }
+
+
+    .benefits__container {
+        width: 100%;
+        max-width: 375px;
+
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    .benefit-card {
+        width: 100%;
+
+        min-height: 78px;
+
+        padding: 12px 18px;
+
+        gap: 15px;
+
+        border-radius: 9px;
+    }
+
+
+    .benefit-card:hover {
+        transform: none;
+
+        box-shadow: none;
+    }
+
+
+    .benefit-card__icon {
+        width: 43px;
+        height: 43px;
+
+        flex: 0 0 43px;
+    }
+
+
+    .benefit-card__text h2 {
+        margin-bottom: 4px;
+
+        font-size: 14px;
+    }
+
+
+    .benefit-card__text p {
+        font-size: 12px;
+
+        line-height: 1.35;
+    }
+}
